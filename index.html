@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Pr6.6</title>
+</head>
+<body>
+<h1>Пошта</h1>
+<form name="mailer" method="post" action="" enctype="text/plain" onSubmit="(document.mailer.action += mailtoandSubject)">
+    <table border=2 align=center cellspacing=1 cellpadding=2 bgcolor=#FFFFE0>
+        <tr>
+            <td>
+                <font size="2" color="#0000CD">Ім'я:</font>
+            </td>
+            <td><input type="text" name="Name" size="24" onChange="msg(this.form)"></td>
+        </tr>
+        <tr>
+            <td>
+                <font size="2" color="#0000CD">Тема:</font>
+            </td>
+            <td><input type="text" name="Subject" size="24" onChange="msg(this.form)"></td>
+        </tr>
+        <tr>
+            <td>
+                <font size="2" color="#0000CD">Повідомлення:</font>
+            </td>
+            <td><textarea name="Message" cols=40 rows=6 onChange="msg(this.form)"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan=2 align=center><input type="submit" value="Відправити" onclick="return checkIt()">
+                <input type=reset value=" Очистити ">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
